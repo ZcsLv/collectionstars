@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+#    避免改了模板还要重启服务器 与devtools结合可实现热部署
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/collectionstars?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  jpa:
+    database : MYSQL
+    show-sql : true
+  mail:
+    protocol: smtp
+    host: smtp.qq.com
+    username: 1901897712@qq.com #邮箱账号
+    password: Zyq123456
+    default-encoding: UTF-8
+          properties:
+            mail:
+              smtp:
+                auth: true
+                starttls:
+                  enable: true
+                  required: true
